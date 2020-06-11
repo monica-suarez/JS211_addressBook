@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: honeydew;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+label{
+    font-size: 24px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+li{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    /* text-align: center; */
+}
+button{
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 14px;
+}

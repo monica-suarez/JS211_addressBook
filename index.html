@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Address Book</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+  <h1>Address Book</h1>
+     <!-- When you click this button, the posts collected in the fetch request will be logged in the console in your devtools tray -->
+  <label class="labels" for="oneUser">Load One User</label>
+  <button id="oneUser" onclick="getUser()">Load</button>
+  <label class="labels" for="multUser">Load Five Users</label>
+  <button id="multUser" onclick="getUsers()">Load</button>
+
+  <!-- When you click this button the posts collected from the fetch request will be displayed below in the ul element with the id='all-posts' -->
+  <!-- <button onclick="userInformation()">User Information</button> -->
+  <div>
+    <ul id='all-users'></ul>
+  </div>
+</body>
+</html>
