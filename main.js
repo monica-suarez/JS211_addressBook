@@ -23,7 +23,8 @@ const getUser = () => {
       moreInfo.innerHTML = ""
       infoButton.innerHTML = "More Info"
       infoButton.addEventListener('click', function(){
-        info = document.createTextNode(`City: ${person.location.city} | Age: ${person.dob.age} | Email: ${person.email}`)
+        info = document.createTextNode(`City: ${person.location.city} | Country: ${person.location.country} | 
+        Age: ${person.dob.age} | Email: ${person.email} | Cell: ${person.cell}`)
         if(moreInfo.innerHTML === ""){
           return moreInfo.appendChild(info);
         }else{
@@ -52,7 +53,8 @@ const getUsers = () =>{
     moreInfo.innerHTML = ""
     infoButton.innerHTML = "More Info"
     infoButton.addEventListener('click', function(){
-      info = document.createTextNode(`City: ${person.location.city} | Age: ${person.dob.age} | Email: ${person.email}`)
+      info = document.createTextNode(`City: ${person.location.city} | Country: ${person.location.country} | 
+        Age: ${person.dob.age} | Email: ${person.email} | Cell: ${person.cell}`)
       if(moreInfo.innerHTML === ""){
         return moreInfo.appendChild(info);
       }else{
