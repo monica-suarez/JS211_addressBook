@@ -69,10 +69,3 @@ const getUsers = () =>{
   }));
   // .then(console.log(arrayOfUsers))
 };
-const loadUser = () =>{
-
-
-}
-const loadMultUser = () =>{
-
-}
