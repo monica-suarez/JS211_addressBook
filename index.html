@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Address Book</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
@@ -17,6 +18,7 @@
   <button id="oneUser" onclick="getUser(fetch)">Load</button>
   <label class="labels" for="multUser">Load Five Users</label>
   <button id="multUser" onclick="getUsers(fetch)">Load</button>
+  <button onclick="phone(fetch)">Name/Pic/Cell</button>
 
   <!-- When you click this button the posts collected from the fetch request will be displayed below in the ul element with the id='all-posts' -->
   <!-- <button onclick="userInformation()">User Information</button> -->
