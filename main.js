@@ -1,15 +1,24 @@
+// uses strict mode so strings are not coerced, variables are not hoisted, etc... 
+// 'use strict';
+
+
+//uncomment assert to run tests please
+// brings in the assert module for unit testing
+// const assert = require('assert');
+
+//creates empty array to push users on to
 let arrayOfUsers = [];
 
 // this function waits for the web page to be loaded, when it does it will run the code inside of it which happen to be getPosts()
-window.onload = function() {
+// window.onload = function() {
   // getUser()
   // getUsers()
 
-}
+// }
 
 // this function is going to make a fetch request to the url inside it's parameter brackets (). Then it will turn the response (data it's getting back), saved here as res. The res.json will not be saved as posts and saved into the variable, arrayOfPosts
-const getUser = () => {
-  fetch('https://randomuser.me/api/')
+const getUser = (fetch) => {
+  return fetch('https://randomuser.me/api/')
     .then(res => res.json())
     .then(user => user.results.map(person => {
       arrayOfUsers.push(person)
@@ -38,7 +47,7 @@ const getUser = () => {
       li.appendChild(moreInfo);
     }));
 };
-const getUsers = () =>{
+const getUsers = (fetch) =>{
   fetch('https://randomuser.me/api/?results=5')
   .then(res => res.json())
   .then(user => user.results.map(person => {
@@ -69,3 +78,36 @@ const getUsers = () =>{
   }));
   // .then(console.log(arrayOfUsers))
 };
+// if (typeof describe === 'function') {
+  describe('#getUser()', () => {
+    it('return the correct url', () => {
+    const testFetch = url =>{
+      assert(
+        url === 'https://randomuser.me/api/'
+      )
+      return new Promise(function(resolve){
+
+      });
+    }
+    getUser(testFetch)
+    });
+    it('bring back a user', () => {
+      const testFetch = url =>{
+        return Promise.resolve({
+          json: () => Promise.resolve({
+            results:[
+              {
+                first: "Robert",
+                last: "Sanchez"
+              }
+            ]
+          })
+        })
+       
+      }
+      getUser(testFetch).then(result => assert(result.first === "Robert"));;
+    })
+
+
+});
+// }
