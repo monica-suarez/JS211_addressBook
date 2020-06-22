@@ -2,9 +2,10 @@
 // 'use strict';
 
 
-//uncomment assert to run tests please
+//!!!!!!!!uncomment assert to run tests please!!!!!!!!!!!
+
 // brings in the assert module for unit testing
-const assert = require('assert');
+// const assert = require('assert');
 
 //creates empty array to push users on to
 let arrayOfUsers = [];
